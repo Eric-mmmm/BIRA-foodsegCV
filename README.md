@@ -11,7 +11,7 @@ Given a camera image of a plate, the model must:
 ## Team and ownership
 
 | Area | Owner | Folder |
-|---|@Eric-mmmm|---|
+|---|---|---|
 | Ensemble pipeline (3 pretrained CV models) | @polyhassan | `src/foodcv/models/ensemble/` |
 | Custom model built from scratch | @Eric-mmmm | `src/foodcv/models/custom/` |
 | Standardized testing / evaluation pipeline | Harlise | `src/foodcv/eval/` |
