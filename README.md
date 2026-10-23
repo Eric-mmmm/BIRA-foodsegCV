@@ -14,7 +14,7 @@ Given a camera image of a plate, the model must:
 |---|---|---|
 | Ensemble pipeline (3 pretrained CV models) | @polyhassan | `src/foodcv/models/ensemble/` |
 | Custom model built from scratch | @Eric-mmmm | `src/foodcv/models/custom/` |
-| Standardized testing / evaluation pipeline | Harlise | `src/foodcv/eval/` |
+| Standardized testing / evaluation pipeline | @arlo-git | `src/foodcv/eval/` |
 
 ## The interface
 
