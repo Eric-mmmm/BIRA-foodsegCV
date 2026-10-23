@@ -218,8 +218,8 @@ marimo/_lsp/
 # --- Project-specific ---
 
 # Datasets (never commit these)
-data/
-datasets/
+/data/
+/datasets/
 
 # Model weights and checkpoints
 *.pt
