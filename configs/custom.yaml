@@ -1,0 +1,9 @@
+# Config for the custom (from-scratch) model. Keep hyperparameters here, not in code.
+data:
+  dataset: foodseg103
+  image_size: 256
+  val_fraction: 0.1
+  split_seed: 0
+  splits_dir: splits
+  batch_size: 8
+  num_workers: 2   # on Windows, set to 0 if DataLoader hangs

@@ -1,0 +1,7 @@
+# Install PyTorch first from https://pytorch.org (pick the CUDA build for your GPU), then:
+numpy
+pillow
+pyyaml
+torch
+torchvision
+datasets
