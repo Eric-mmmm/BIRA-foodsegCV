@@ -1,0 +1,23 @@
+{
+  "status": "LOCAL_UPGRADE_VALIDATION_SELECTED",
+  "final_predictions_used": false,
+  "region": {
+    "architecture": "deeplabv3_mobilenet_v3_large",
+    "classes": [
+      "non_target_background",
+      "banana",
+      "broccoli",
+      "carrot",
+      "cauliflower",
+      "pasta",
+      "rice",
+      "bread",
+      "potato"
+    ],
+    "checkpoint": "upgrades/deeplab_640/best.pt",
+    "checkpoint_sha256": "01ed6c6ea0ed0b2fc767a2bcf8e09b6f9b719a8ee1c1a79b96fb0b171d1dde76",
+    "input_pixels": 640,
+    "precision_policy": "fp16",
+    "minimum_area_fraction": 0.01
+  }
+}

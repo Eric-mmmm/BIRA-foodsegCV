@@ -1,0 +1,29 @@
+{
+  "dish": {
+    "architecture": "efficientnet_v2_s",
+    "checkpoint": "models/bfe4aaa54f9ecb988d54f0569871b1c0b346a84f7d3e0c23b3752f55af54d344.pt",
+    "checkpoint_sha256": "bfe4aaa54f9ecb988d54f0569871b1c0b346a84f7d3e0c23b3752f55af54d344",
+    "classes": [
+      "macaroni_and_cheese",
+      "spaghetti_bolognese",
+      "spaghetti_carbonara",
+      "lasagna",
+      "gnocchi",
+      "risotto",
+      "other_food"
+    ],
+    "input_pixels": 320,
+    "resize_short_side": 365,
+    "temperature": 1.0,
+    "acceptance_threshold": 0.0,
+    "per_class_thresholds": {
+      "macaroni_and_cheese": 0.68,
+      "spaghetti_bolognese": 0.47,
+      "spaghetti_carbonara": 0.0,
+      "lasagna": 0.82,
+      "gnocchi": 0.71,
+      "risotto": 0.0,
+      "other_food": 0.96
+    }
+  }
+}

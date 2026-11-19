@@ -1,0 +1,22 @@
+{
+  "status": "LOCAL_UPGRADE_VALIDATION_SELECTED",
+  "final_predictions_used": false,
+  "dish": {
+    "architecture": "convnext_tiny",
+    "checkpoint": "upgrades/convnext_tuned_320/best.pt",
+    "checkpoint_sha256": "c7397217f77c6e07a0ca90acddf5b1402cf55f0cf8e12661f284855689395dcb",
+    "classes": [
+      "macaroni_and_cheese",
+      "spaghetti_bolognese",
+      "spaghetti_carbonara",
+      "lasagna",
+      "gnocchi",
+      "risotto",
+      "other_food"
+    ],
+    "input_pixels": 320,
+    "resize_short_side": 365,
+    "temperature": 1.0,
+    "acceptance_threshold": 0.0
+  }
+}
