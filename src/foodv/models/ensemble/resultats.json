@@ -1,0 +1,24 @@
+{
+  "images": 2135,
+  "ignored": 0,
+  "food_classes_present": 103,
+  "miou_food_pct": 46.94096216460586,
+  "miou_all_pct": 47.383371064068044,
+  "macro_dice_food_pct": 59.97804926943672,
+  "pixel_accuracy_pct": 83.97549865554137,
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "onnxruntime": "1.26.0",
+  "torch": "2.11.0+cu128",
+  "model_sha256": "2586ec855f522b1b8dc94d423e323683da17683a8b667b16fd9f6465994497e7",
+  "validation_sha256": "73d4d49abc2ef135dfccbce86f395d8e39215cf656d2954b516a88572f24b0e6",
+  "inference_ms": {
+    "mean": 41.54121086668126,
+    "p50": 41.3847000017995,
+    "p95": 43.06305999489268
+  },
+  "image_to_mask_ms": {
+    "mean": 48.64503644046644,
+    "p50": 46.858700006850995,
+    "p95": 56.054990003758576
+  }
+}

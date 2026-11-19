@@ -12,3 +12,5 @@ bash build.sh convnext
 Avec TensorRT 10, les moteurs se construisent sur la Jetson. Le test photo se lance avec `python3 bench_photo.py assiette.jpg`. Les mesures dans pc_results.json proviennent de la RTX 4060 Laptop. La mesure sur Jetson reste à faire.
 
 [Archive complète et guide](https://github.com/Eric-mmmm/BIRA-foodsegCV/releases/tag/jetson-onnx-2026-11-19)
+
+[FoodSeg103 DINOv2 (46,94 % de mIoU) : charger le modèle et mesurer sa vitesse sur Jetson](../../../foodv/models/ensemble/README.md)
