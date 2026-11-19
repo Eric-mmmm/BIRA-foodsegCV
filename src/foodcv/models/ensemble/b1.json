@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "task": "binary_food_presence",
+  "architecture": "mobilenet_v3_small",
+  "classes": [
+    "non_food",
+    "food"
+  ],
+  "checkpoint": {
+    "path": "models/3bf8e34327a1487f30a85c4ec257b0d20fa707da9f50eae2d899fb2e2e8c3467.pt",
+    "sha256": "3bf8e34327a1487f30a85c4ec257b0d20fa707da9f50eae2d899fb2e2e8c3467"
+  },
+  "epoch": 1,
+  "input_pixels": 224,
+  "resize": 256,
+  "interpolation": "BILINEAR antialias=True",
+  "mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "temperature": 1.0,
+  "threshold": 0.68392014503479,
+  "threshold_one_semantics": "always reject",
+  "preregistration": {
+    "path": "source:sha256:c10adf3937415ab9e849667365ac6b30114e1d3c8ae40e7dba0742aaa3b804f8",
+    "sha256": "c10adf3937415ab9e849667365ac6b30114e1d3c8ae40e7dba0742aaa3b804f8"
+  },
+  "validation_csv": {
+    "path": "source:sha256:517e736c864e8f50f1c19990f4ba0815249d63830ada7dbfd44394d4007b3081",
+    "sha256": "517e736c864e8f50f1c19990f4ba0815249d63830ada7dbfd44394d4007b3081"
+  },
+  "validation_argmax_metrics": {
+    "count": 952,
+    "correct": 930,
+    "accuracy": 0.976890756302521,
+    "macro_f1": 0.9768538779479699,
+    "per_class": {
+      "non_food": {
+        "support": 500,
+        "assigned": 490,
+        "correct": 484,
+        "precision": 0.9877551020408163,
+        "recall": 0.968,
+        "f1": 0.9777777777777779
+      },
+      "food": {
+        "support": 452,
+        "assigned": 462,
+        "correct": 446,
+        "precision": 0.9653679653679653,
+        "recall": 0.9867256637168141,
+        "f1": 0.975929978118162
+      }
+    },
+    "confusion_actual_rows_predicted_columns": [
+      [
+        484,
+        16
+      ],
+      [
+        6,
+        446
+      ]
+    ]
+  },
+  "threshold_selection": {
+    "threshold": 0.68392014503479,
+    "minimum_validation_non_food_specificity": 0.99,
+    "temperature": 1.0,
+    "selection_split": "val",
+    "external_observations_used": 0,
+    "candidate_rule": "B1_VALID_MIDPOINT_PRESERVE_SELECTED_PARTITION_V1",
+    "objective": "Select the original best VALID partition: specificity>=.99, maximum food coverage, tie higher specificity; then maximize minimum boundary margin inside its open stable interval by midpoint.",
+    "validation_metrics": {
+      "count": 952,
+      "correct": 937,
+      "accuracy": 0.9842436974789915,
+      "macro_f1": 0.9841947105407334,
+      "per_class": {
+        "non_food": {
+          "support": 500,
+          "assigned": 505,
+          "correct": 495,
+          "precision": 0.9801980198019802,
+          "recall": 0.99,
+          "f1": 0.9850746268656716
+        },
+        "food": {
+          "support": 452,
+          "assigned": 447,
+          "correct": 442,
+          "precision": 0.9888143176733781,
+          "recall": 0.9778761061946902,
+          "f1": 0.9833147942157953
+        }
+      },
+      "confusion_actual_rows_predicted_columns": [
+        [
+          495,
+          5
+        ],
+        [
+          10,
+          442
+        ]
+      ],
+      "threshold": 0.68392014503479,
+      "threshold_one_semantics": "always reject even if rounded probability equals one",
+      "non_food_support": 500,
+      "food_support": 452,
+      "false_food_acceptances": 5,
+      "false_food_acceptance_rate": 0.01,
+      "non_food_specificity": 0.99,
+      "food_accepted": 442,
+      "food_coverage": 0.9778761061946902,
+      "false_food_acceptance_wilson95": [
+        0.004278753896590496,
+        0.023193099755730702
+      ],
+      "food_coverage_wilson95": [
+        0.9597587062689188,
+        0.9879392085228285
+      ]
+    },
+    "interval": {
+      "highest_rejected_probability": 0.6759784817695618,
+      "lowest_accepted_probability": 0.6918618083000183,
+      "partition_preserving_interval": "(highest_rejected, lowest_accepted]",
+      "chosen_open_interval": "(highest_rejected, lowest_accepted)",
+      "threshold": 0.68392014503479,
+      "open_gap": 0.015883326530456543,
+      "minimum_observed_probability_margin": 0.007941663265228271,
+      "partition_preserved_exactly": true
+    },
+    "original_observed_score_partition_threshold": 0.6918618083000183,
+    "boundary_ids": {
+      "highest_rejected": [
+        "food5k_dev_validation_non_food_421"
+      ],
+      "lowest_accepted": [
+        "food5k_dev_validation_food_39"
+      ]
+    }
+  },
+  "precision": "CUDA FP16 autocast with FP32 parameters",
+  "scope": "New B1-only validation-selected midpoint service policy; original batch128 agreement remains failed; external challenge will be repeated.",
+  "service_calibration": {
+    "path": "source:sha256:d6c22e022396e20410744eabc0d65b980f049f084b9aeb0fc063208abe643eec",
+    "sha256": "d6c22e022396e20410744eabc0d65b980f049f084b9aeb0fc063208abe643eec"
+  },
+  "execution_contract": {
+    "batch_size": 1,
+    "runtime": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "executable": "historical_reference_interpreter",
+      "torch": "2.11.0+cu128",
+      "cuda": "12.8",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "device_index": 0,
+      "cudnn_version": 91900,
+      "flags": {
+        "cudnn_enabled": true,
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": false,
+        "cudnn_allow_tf32": true,
+        "matmul_allow_tf32": false,
+        "matmul_precision": "highest",
+        "deterministic_algorithms": false,
+        "deterministic_warn_only": false,
+        "threads": 14,
+        "interop_threads": 14,
+        "CUBLAS_WORKSPACE_CONFIG": null
+      },
+      "cpu_neural_fallback": false
+    },
+    "scope": "PC CUDA original observed B1 serving profile; caller must enforce/verify these flags."
+  }
+}
